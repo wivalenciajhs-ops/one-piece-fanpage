@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>One Piece Fan Page</title>
 <style>
 body{
@@ -8,14 +9,12 @@ body{
   font-family: Arial, sans-serif;
   color: white;
   text-align:center;
-  /* Background image for the whole page */
-  background-image: url('https://i.imgur.com/6Aq3Ukt.jpg'); /* One Piece collage wallpaper */
+  background-image: url('images/background.jpg'); /* local background */
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
 }
 
-/* Header styling */
 header{
   background:#00000080;
   padding:20px;
@@ -23,7 +22,6 @@ header{
   overflow:hidden;
 }
 
-/* Floating pirate ship animation */
 #pirateShip{
   position:absolute;
   top:10px;
@@ -36,7 +34,6 @@ header{
   100% { left:110%; }
 }
 
-/* Navigation bar */
 nav{
   background:#00000080;
   padding:10px;
@@ -49,7 +46,6 @@ nav a{
 }
 nav a:hover{ color:gold; }
 
-/* Section styling */
 section{
   background:#00000080;
   margin:20px;
@@ -57,7 +53,6 @@ section{
   border-radius:15px;
 }
 
-/* Crew cards */
 .gallery{
   display:flex;
   flex-wrap:wrap;
@@ -88,7 +83,6 @@ section{
   font-size:14px;
 }
 
-/* Quiz */
 .quiz{
   background:#00000080;
   padding:20px;
@@ -125,62 +119,57 @@ function submitQuiz(){
 
 <body>
 <header>
-<img src="https://i.imgur.com/h9LhDPz.png" width="120" alt="Straw Hat Logo">
+<img src="images/pirateShip.png" id="pirateShip" alt="Pirate Ship">
 <h1>🏴‍☠️ One Piece Fan Page</h1>
 <p>Welcome to the Grand Line!</p>
-<img id="pirateShip" src="https://i.imgur.com/7Ud9bJp.png" alt="Pirate Ship">
 </header>
 
 <nav>
 <a href="#intro">Intro</a>
 <a href="#crew">Crew</a>
-<a href="#map">World Map</a>
 <a href="#season1">Season 1</a>
 <a href="#season2">Season 2</a>
 <a href="#quiz">Quiz</a>
 </nav>
 
-<!-- Intro Video -->
 <section id="intro">
 <h2>🎬 Introducing the Characters</h2>
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/0-OOW3TCBRA?si=MedyhYC620KoKO1t"
 title="One Piece Intro Video" frameborder="0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen></iframe>
 </section>
 
-<!-- Crew Gallery -->
 <section id="crew">
 <h2>🖼 Straw Hat Crew</h2>
 <div class="gallery">
 
 <div class="card">
-<img src="https://i.imgur.com/LHj6lXr.png" alt="Luffy">
+<img src="images/luffy.png" alt="Luffy">
 <h3>Luffy</h3>
 <div class="funfact">Fun Fact: Luffy loves meat 🍖 and ate the Gomu Gomu no Mi Devil Fruit!</div>
 </div>
 
 <div class="card">
-<img src="https://i.imgur.com/0qFf7lr.png" alt="Zoro">
+<img src="images/zoro.png" alt="Zoro">
 <h3>Zoro</h3>
 <div class="funfact">Fun Fact: Zoro wants to be the greatest swordsman ⚔️ in the world!</div>
 </div>
 
 <div class="card">
-<img src="https://i.imgur.com/vyV3yfa.png" alt="Nami">
+<img src="images/nami.png" alt="Nami">
 <h3>Nami</h3>
 <div class="funfact">Fun Fact: Nami loves treasure 💰 and can predict weather with her Clima‑Tact!</div>
 </div>
 
 <div class="card">
-<img src="https://i.imgur.com/LGIXYvK.png" alt="Sanji">
+<img src="images/sanji.png" alt="Sanji">
 <h3>Sanji</h3>
 <div class="funfact">Fun Fact: Sanji never uses his hands in combat 🥋 and is an excellent chef!</div>
 </div>
 
 <div class="card">
-<img src="https://i.imgur.com/fd3F8Y6.png" alt="Chopper">
+<img src="images/chopper.png" alt="Chopper">
 <h3>Chopper</h3>
 <div class="funfact">Fun Fact: Chopper ate the Hito Hito no Mi 🍇 giving him human intelligence!</div>
 </div>
@@ -188,14 +177,6 @@ allowfullscreen></iframe>
 </div>
 </section>
 
-<!-- World Map -->
-<section id="map">
-<h2>🗺 World of One Piece</h2>
-<img src="https://i.imgur.com/Z3qRbUL.png" alt="Grand Line Map" width="700">
-<p>The Straw Hat Pirates travel the dangerous Grand Line searching for the legendary treasure called the One Piece.</p>
-</section>
-
-<!-- Season 1 -->
 <section id="season1">
 <h2>📖 Season 1 Story</h2>
 <h3>Season 1 Trailer</h3>
@@ -207,7 +188,6 @@ He meets Zoro, Nami, Usopp, and Sanji, facing foes like Buggy, Captain Kuro, and
 </p>
 </section>
 
-<!-- Season 2 -->
 <section id="season2">
 <h2>📖 Season 2 Story</h2>
 <h3>Season 2 Trailer</h3>
@@ -219,7 +199,6 @@ Their bonds and resolve grow as they chase the One Piece treasure.
 </p>
 </section>
 
-<!-- Quiz -->
 <section id="quiz">
 <h2>⭐ Let’s see how avid of a fan you are! ⭐</h2>
 <div class="quiz">
@@ -249,7 +228,7 @@ Their bonds and resolve grow as they chase the One Piece treasure.
 </section>
 
 <footer>
-<p>Made by One Piece Fans (Group 4 | Grade 10 - Newton) ⚓</p>
+<p>Made by One Piece Fans (Group 4 | Grade 10) ⚓</p>
 </footer>
 
 </body>
