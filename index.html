@@ -2,21 +2,20 @@
 <html>
 <head>
 <title>One Piece Fan Page</title>
-
 <style>
 body{
   margin:0;
-  font-family:Arial, sans-serif;
-  color:white;
+  font-family: Arial, sans-serif;
+  color: white;
   text-align:center;
-
-  /* Background set to collage wallpaper */
-  background-image:url('https://wallpaper-cave.com/photo/373/one-piece-crew-collage-wallpaper.jpg');
-  background-size:cover;
-  background-attachment:fixed;
-  background-position:center;
+  /* Background image for the whole page */
+  background-image: url('https://i.imgur.com/6Aq3Ukt.jpg'); /* One Piece collage wallpaper */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
+/* Header styling */
 header{
   background:#00000080;
   padding:20px;
@@ -24,7 +23,7 @@ header{
   overflow:hidden;
 }
 
-/* Sailing pirate ship animation */
+/* Floating pirate ship animation */
 #pirateShip{
   position:absolute;
   top:10px;
@@ -32,13 +31,12 @@ header{
   width:120px;
   animation: sail 25s linear infinite;
 }
-
 @keyframes sail {
   0% { left:-150px; }
   100% { left:110%; }
 }
 
-/* Navigation */
+/* Navigation bar */
 nav{
   background:#00000080;
   padding:10px;
@@ -51,7 +49,7 @@ nav a{
 }
 nav a:hover{ color:gold; }
 
-/* Section styles */
+/* Section styling */
 section{
   background:#00000080;
   margin:20px;
@@ -59,7 +57,7 @@ section{
   border-radius:15px;
 }
 
-/* Crew gallery cards */
+/* Crew cards */
 .gallery{
   display:flex;
   flex-wrap:wrap;
@@ -74,8 +72,8 @@ section{
   transition:0.3s;
 }
 .card:hover{
-  transform:scale(1.05);
-  box-shadow:0 0 15px gold;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px gold;
 }
 .card img{
   width:100%;
@@ -83,7 +81,7 @@ section{
 }
 
 .funfact{
-  background:rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.8);
   margin-top:8px;
   padding:8px;
   border-radius:8px;
@@ -116,23 +114,21 @@ footer{
 function submitQuiz(){
   const answers = {q1:'luffy', q2:'zoro', q3:'nami', q4:'sanji', q5:'chopper'};
   let score=0;
-  for(let i=1; i<=5; i++){
-    let ans = document.querySelector('input[name="q'+i+'"]:checked')?.value;
-    if(ans == answers['q'+i]) score++;
+  for(let i=1;i<=5;i++){
+    let ans=document.querySelector('input[name="q'+i+'"]:checked')?.value;
+    if(ans==answers['q'+i]) score++;
   }
-  alert("Your score: " + score + " / 5 ⭐");
+  alert("Your score: " + score + "/5 ⭐");
 }
 </script>
-
 </head>
 
 <body>
-
 <header>
-<img src="https://via.placeholder.com/120x120?text=Straw+Hat+Logo">
+<img src="https://i.imgur.com/h9LhDPz.png" width="120" alt="Straw Hat Logo">
 <h1>🏴‍☠️ One Piece Fan Page</h1>
 <p>Welcome to the Grand Line!</p>
-<img id="pirateShip" src="https://via.placeholder.com/120x80?text=Ship">
+<img id="pirateShip" src="https://i.imgur.com/7Ud9bJp.png" alt="Pirate Ship">
 </header>
 
 <nav>
@@ -146,12 +142,12 @@ function submitQuiz(){
 
 <!-- Intro Video -->
 <section id="intro">
-  <h2>🎬 Introducing the Characters</h2>
-  <iframe width="560" height="315"
-  src="https://www.youtube.com/embed/0-OOW3TCBRA?si=MedyhYC620KoKO1t"
-  title="One Piece Intro Video"
-  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen></iframe>
+<h2>🎬 Introducing the Characters</h2>
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/0-OOW3TCBRA?si=MedyhYC620KoKO1t"
+title="One Piece Intro Video" frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
 </section>
 
 <!-- Crew Gallery -->
@@ -160,31 +156,31 @@ function submitQuiz(){
 <div class="gallery">
 
 <div class="card">
-<img src="https://via.placeholder.com/200x250?text=Luffy">
+<img src="https://i.imgur.com/LHj6lXr.png" alt="Luffy">
 <h3>Luffy</h3>
 <div class="funfact">Fun Fact: Luffy loves meat 🍖 and ate the Gomu Gomu no Mi Devil Fruit!</div>
 </div>
 
 <div class="card">
-<img src="https://via.placeholder.com/200x250?text=Zoro">
+<img src="https://i.imgur.com/0qFf7lr.png" alt="Zoro">
 <h3>Zoro</h3>
 <div class="funfact">Fun Fact: Zoro wants to be the greatest swordsman ⚔️ in the world!</div>
 </div>
 
 <div class="card">
-<img src="https://via.placeholder.com/200x250?text=Nami">
+<img src="https://i.imgur.com/vyV3yfa.png" alt="Nami">
 <h3>Nami</h3>
 <div class="funfact">Fun Fact: Nami loves treasure 💰 and can predict weather with her Clima‑Tact!</div>
 </div>
 
 <div class="card">
-<img src="https://via.placeholder.com/200x250?text=Sanji">
+<img src="https://i.imgur.com/LGIXYvK.png" alt="Sanji">
 <h3>Sanji</h3>
 <div class="funfact">Fun Fact: Sanji never uses his hands in combat 🥋 and is an excellent chef!</div>
 </div>
 
 <div class="card">
-<img src="https://via.placeholder.com/200x250?text=Chopper">
+<img src="https://i.imgur.com/fd3F8Y6.png" alt="Chopper">
 <h3>Chopper</h3>
 <div class="funfact">Fun Fact: Chopper ate the Hito Hito no Mi 🍇 giving him human intelligence!</div>
 </div>
@@ -195,7 +191,7 @@ function submitQuiz(){
 <!-- World Map -->
 <section id="map">
 <h2>🗺 World of One Piece</h2>
-<img src="https://via.placeholder.com/700x400?text=Grand+Line+Map">
+<img src="https://i.imgur.com/Z3qRbUL.png" alt="Grand Line Map" width="700">
 <p>The Straw Hat Pirates travel the dangerous Grand Line searching for the legendary treasure called the One Piece.</p>
 </section>
 
@@ -203,13 +199,11 @@ function submitQuiz(){
 <section id="season1">
 <h2>📖 Season 1 Story</h2>
 <h3>Season 1 Trailer</h3>
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/l6kp780S-os"
-title="One Piece Season 1 Trailer"
-frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/l6kp780S-os"
+title="One Piece Season 1 Trailer" frameborder="0" allowfullscreen></iframe>
 <p>
 Season 1 introduces Monkey D. Luffy and the start of his dream to become Pirate King.
-In the East Blue, he meets Zoro, Nami, Usopp, and Sanji, and faces foes like Buggy, Captain Kuro, and Don Krieg. Together they form the Straw Hat crew and embark toward the Grand Line.
+He meets Zoro, Nami, Usopp, and Sanji, facing foes like Buggy, Captain Kuro, and Don Krieg.
 </p>
 </section>
 
@@ -217,12 +211,11 @@ In the East Blue, he meets Zoro, Nami, Usopp, and Sanji, and faces foes like Bug
 <section id="season2">
 <h2>📖 Season 2 Story</h2>
 <h3>Season 2 Trailer</h3>
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/L2N4Fgj5QOI"
-title="One Piece Season 2 Trailer"
-frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/L2N4Fgj5QOI"
+title="One Piece Season 2 Trailer" frameborder="0" allowfullscreen></iframe>
 <p>
-In Season 2 — One Piece: Into the Grand Line — the Straw Hats leave the East Blue and face Loguetown, Reverse Mountain, and challenges from Baroque Works. Their bonds and resolve grow as they chase the One Piece treasure.
+In Season 2 — Into the Grand Line — the Straw Hats face Loguetown, Reverse Mountain, and Baroque Works challenges.
+Their bonds and resolve grow as they chase the One Piece treasure.
 </p>
 </section>
 
